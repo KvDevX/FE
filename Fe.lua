@@ -73432,6 +73432,9 @@ gamesse:AddButton({
 	Title = "FE Crash/Lag Sount Bronx",
 	Description = ":)",
 	Callback = function()
+		if game.PlaceId ~= 10179538382 then
+            game:GetService("TeleportService"):Teleport(10179538382,game:GetService("Players").LocalPlayer)
+        else
             game:GetService("RunService").RenderStepped:Connect(function()
                 local args = {
                     [1] = "None",
@@ -73490,6 +73493,8 @@ gamesse:AddButton({
                     end)
                 end)
             end)
+        end
+	end
 })
 local Chatwithhackers = Window:AddTab({
 	Title = "Chat with other exploiters",
